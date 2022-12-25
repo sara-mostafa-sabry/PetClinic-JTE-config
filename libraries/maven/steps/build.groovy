@@ -1,5 +1,14 @@
 void call(){
     stage("Maven: Build"){
-        println "build from the maven library"
-    }
-}
+            
+            steps {
+               
+                  sh """
+                       java -version 
+                       mvn -version
+                       ./mvnw package 
+                     """
+                
+                }    
+
+        }        
