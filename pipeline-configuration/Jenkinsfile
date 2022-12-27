@@ -1,5 +1,3 @@
-build()
-dockerBuild(
 pipeline {
     agent {label 'docker-agents'}  
      
