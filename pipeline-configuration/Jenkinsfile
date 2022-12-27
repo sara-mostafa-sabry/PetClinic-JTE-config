@@ -1,2 +1,16 @@
 build()
-dockerBuild()
+dockerBuild(
+pipeline {
+    agent {label 'docker-agents'}  
+     
+stages {
+    
+    stage('build-and-deploy') { 
+           steps {
+		maven_build()
+		builld_img()
+		deploy_app()
+           }
+    }    
+}   
+})
