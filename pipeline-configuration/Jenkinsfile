@@ -6,7 +6,7 @@ stages {
     stage('build-and-deploy') { 
            steps {
 		maven_build()
-		builld_img()
+		build_img()
 		deploy_app()
            }
     }    
